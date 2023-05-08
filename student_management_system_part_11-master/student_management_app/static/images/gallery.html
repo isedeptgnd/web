@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <div class="full-img" id="fullImgBox">
+        <img src="img1.jpg" id="fullImg" >
+        <span onclick="closeFullImg()">X </span>
+    </div>
+    <div class="img-gallery">
+        <img src="WhatsApp Image 2023-04-10 at 9.48.07 AM.jpeg" onclick="openFullImg(this.src)" >
+        <img src="WhatsApp Image 2023-04-10 at 9.50.49 AM.jpeg" onclick="openFullImg(this.src)" >
+        <img src="WhatsApp Image 2023-04-10 at 10.02.49 AM.jpeg" onclick="openFullImg(this.src)" >
+        <img src="WhatsApp Image 2023-04-10 at 9.50.50 AM.jpeg" onclick="openFullImg(this.src)" >
+        <img src="IMG_0098.JPG" onclick="openFullImg(this.src)" >
+        <img src="IMG_9703.JPG" onclick="openFullImg(this.src)" >
+        <img src="IMG_9718.JPG" onclick="openFullImg(this.src)" >
+        <img src="IMG_9856.JPG" onclick="openFullImg(this.src)" >
+    </div>
+    
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(pic){
+            fullImgBox.style.display = "flex"; 
+            fullImg.src = pic;
+        }
+        function closeFullImg(){
+            fullImgBox.style.display = "none";
+        }
+    </script>
+</body>
+</html>
